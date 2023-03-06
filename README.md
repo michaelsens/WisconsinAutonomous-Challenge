@@ -19,10 +19,12 @@ For some reason my code was outputting a large number of centroids with the coor
 
 I split the array of centroids into two different arrays for the left and right half of the screen. I then used numpy to solve a linear equation based on the sequence of points utilizing linalg.lstsq to find a solution that minimizes the sum of the squares of the residuals. This outputted both the intercept and slope of the lines of best fit and I used this information to plot both the lines on the image.
 
+
 Failures:
 
 For me, there were two stages in solving this problem. The first stage involved gaining an understanding of both the fundemental steps I needed to follow to arrive at the solution along with learning the specific functions and code that would help me accomplish each step of my soltuion. For example, I first approached this problem with the fundemental misconception that I needed to use opencv to identify lines. This approach eventually lead me to an output that drew lines on every edge and contour but failed to identify the signifigance of the lines made by the cones. Despite such failures being so far from the solution, each one taught me new skills that would eventually contribute to me successfully solve the problem such as gaining a preliminary understanding of the contour tracing that would later help me identify the centroids of the cones.
 
 The second stage of solving this problem involved a lot of refining. At this point I had established the fundemental steps I needed to take to solve the problem, along with the general functions I needed to use. However there were still many issues, primarily around noise in the filtered image that were processed as cones and wildly threw off the lines. At this point I needed to analyze the data at each step and either refine the processing or think of unique ways to filter out incorrect data. This long process eventually allowed me to both arrive at a successful soltuion and gain a deeper understanding of some of the functionality of opencv.
+
 
 Libraries: numpy, cv2
